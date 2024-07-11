@@ -1,0 +1,5 @@
+{
+  "typescript.tsserver.maxTsServerMemory": 4096,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false
+}

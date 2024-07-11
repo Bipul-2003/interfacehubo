@@ -1,0 +1,107 @@
+.page{
+    width: 1440px;
+    height: 1644px;
+    position: relative;
+    background: white;
+}
+.text1{
+            left: 61px;
+            top: 181px;
+            position: absolute; 
+            text-align: center;
+            color: black;
+            font-size: 30px;
+            font-family: "Playwrite IT Moderna", cursive;;
+            font-weight: 700px;
+            letter-spacing: 5.27px;
+            word-wrap: break-word;
+}
+.forntImage{
+    width: 547px;
+    height: 408px;
+    left: 90px;
+    top: 422px;
+    position: absolute;
+    border-radius: 90px;
+}
+.text2{
+            left: 51px;
+            top: 932px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 30px;
+            
+            font-family: "Playwrite IT Moderna", cursive;;
+            font-weight: 700px;
+            letter-spacing: 3.74px;
+            word-wrap: break-word;
+}
+.btn{
+    width: 377px;
+    height: 133px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #D616F5;
+    border-top-left-radius: 78px;
+    border-bottom-left-radius: 78px;
+}
+.btn1{
+            width: 377px;
+            height: 133px;
+            left: 1033px;
+            top: 400px;
+            position: absolute;
+}
+.btnimage
+{
+    width: 129px;
+    height: 104px;
+    left: 20px;
+    top: 14px;
+    position: absolute;
+    border-radius: 9999px;
+    border: 2px white solid;
+}
+.btnText{
+              width: 151px;
+              left: 173px;
+              top: 47px;
+              position: absolute;
+              text-align: center;
+              color: black;
+              font-size: 31px;
+              font-family: "Inter";
+              font-weight: 700px;
+              letter-spacing: 3.4px;
+              word-wrap: break-word;
+}
+.btnText1{
+            width: 151px;
+              left: 173px;
+              top: 47px;
+              position: absolute;
+              text-align: center;
+              color: black;
+              font-size: 20px;
+              font-family: Inter;
+              font-weight: 700px;
+              letter-spacing: 3.4px;
+              word-wrap: break-word;
+}
+.btn2{
+            width: 377px;
+            height: 133px;
+            left: 1033px;
+            top: 581px;
+            position: absolute;
+}
+.btn3{
+
+    width: 377px;
+    height: 133px;
+    left: 1033px;
+    top: 757px;
+    position: absolute;
+}
