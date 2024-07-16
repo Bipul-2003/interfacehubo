@@ -1,4 +1,6 @@
-import dbConnect from "@/lib/dbConnect";
+'use server'
+
+import dbConnect from "@/lib/dbConnection";
 
 import UserModel from "@/models/Users";
 import { NextRequest } from "next/server";

@@ -43,16 +43,16 @@ const Courses = () => {
   }
   return (
     <div className="h-full w-full flex flex-col pt-24">
-      <h1 className="font-bold text-4xl mb-6">Courses</h1>
-      <div className="grid  md:grid-cols-4 gap-4 ">
+      <h1 className="font-bold text-3xl md:text-4xl mb-6">Courses</h1>
+      <div className="grid grid-cols-2 py-10 md:grid-cols-4 gap-4 ">
         {allcourses.courses.map((course: CourseType) => (
-          <Card key={String(course._id)} className="p-8">
+          <Card key={String(course._id)} className="p-2 md:p-8">
             <Link href={`/courses/${String(course._id)}`}>
               <CardHeader>
-                <CardTitle className="text-2xl">{course.title}</CardTitle>
+                <CardTitle className="text-base md:text-2xl ">{course.title}</CardTitle>
                 {/* <CardDescription>{course.courseContent}</CardDescription> */}
               </CardHeader>
-              <CardFooter className="text-sm">
+              <CardFooter className="text-xs md:text-sm">
                 <Clock2 className="size-4 mr-2" />
                 {`${course.duration} hours`}
               </CardFooter>

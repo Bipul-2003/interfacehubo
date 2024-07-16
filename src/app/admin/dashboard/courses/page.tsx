@@ -196,7 +196,7 @@ export default function page() {
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="flex-col space-y-6 ml-36 max-w-2xl">
+                className="flex-col space-y-6 md:ml-36 max-w-2xl">
                 <FormField
                   name="title"
                   control={form.control}

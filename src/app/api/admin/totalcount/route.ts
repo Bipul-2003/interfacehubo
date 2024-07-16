@@ -1,4 +1,4 @@
-import dbConnect from "@/lib/dbConnect";
+import dbConnect from "@/lib/dbConnection";
 import CourseModel from "@/models/Courses";
 import EnrollmentModel from "@/models/Enrollments";
 import SessionModel from "@/models/Sessions";

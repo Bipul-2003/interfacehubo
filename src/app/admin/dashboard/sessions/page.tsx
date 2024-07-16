@@ -337,7 +337,7 @@ export default function page() {
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="flex-col space-y-6 ml-36 max-w-2xl">
+                className="flex-col space-y-6 md:ml-36 max-w-2xl">
                 <FormField
                   name="courseid"
                   control={form.control}
@@ -364,7 +364,7 @@ export default function page() {
                     </FormItem>
                   )}
                 />
-                <div className="flex space-x-4 items-start">
+                <div className="md:flex md:space-x-4 items-start">
                   <FormField
                     name="dateRange"
                     control={form.control}
@@ -397,7 +397,7 @@ export default function page() {
                               )}
                             </Button>
                           </PopoverTrigger>
-                          <PopoverContent className="w-auto p-0" align="start">
+                          <PopoverContent className="w-auto p-0" align="start" side="bottom" >
                             <Calendar
                               initialFocus
                               mode="range"
@@ -405,6 +405,7 @@ export default function page() {
                               selected={field.value}
                               onSelect={field.onChange}
                               numberOfMonths={2}
+                              className="w-auto"
                               today={currentDate}
                               disabled={(date) => {
                                 // date.getTime
@@ -460,7 +461,7 @@ export default function page() {
                 </div>
                 <div className="">
                   <FormLabel>Select Days</FormLabel>
-                  <div className="grid grid-cols-4 gap-3">
+                  <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
                     {daysOfWeek.map((day) => (
                       <FormField
                         key={day}
@@ -577,7 +578,7 @@ export default function page() {
                 </div>
 
                 <Button disabled={creatingSession} type="submit" className="min-w-full">
-                  Create
+                  Create Session
                 </Button>
               </form>
             </Form>

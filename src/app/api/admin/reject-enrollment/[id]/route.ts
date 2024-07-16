@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import dbConnect from "@/lib/dbConnect";
+import dbConnect from "@/lib/dbConnection";
 import EnrollmentModel from "@/models/Enrollments";
 import RejectedEnrollmentModel from "@/models/RejectedEnrollments";
 import SessionModel from "@/models/Sessions";

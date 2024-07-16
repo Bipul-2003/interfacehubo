@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import React, { ReactNode } from "react";
 import { Navbar } from "./navbar";
+import Footer from "./Footer";
 
 const Layout = ({children}:{children:ReactNode}) => {
 
@@ -11,6 +12,7 @@ const Layout = ({children}:{children:ReactNode}) => {
     <div className="m-2">
         {!noNavbarRoutes.includes(path) && <Navbar/>}
         {children}
+        {!noNavbarRoutes.includes(path) && <Footer/>}
     </div>
   )
 };

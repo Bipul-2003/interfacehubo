@@ -1,10 +1,10 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
 
-enum role {
-  admin = 1,
-  user = 2,
-  instuctor = 3,
-}
+// enum Role {
+//   Admin = 1,
+//   User = 2,
+//   Instructor = 3,
+// }
 
 export interface UserType extends Document {
   username: string;
@@ -17,7 +17,7 @@ export interface UserType extends Document {
   isVerified: boolean;
   verifyCode: string;
   verifyCodeExpire: Date;
-  role: role;
+  role: number;
 }
 
 const UserSchema: Schema<UserType> = new Schema(
@@ -25,7 +25,7 @@ const UserSchema: Schema<UserType> = new Schema(
     username: {
       type: String,
       required: [true, "Username required"],
-      trim: true
+      trim: true,
     },
     firstname: {
       type: String,
@@ -44,7 +44,7 @@ const UserSchema: Schema<UserType> = new Schema(
     },
     email: {
       type: String,
-      required: [true, "email required"],
+      required: [true, "Email required"],
       match: [
         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/g,
         "Invalid email",
@@ -76,19 +76,23 @@ const UserSchema: Schema<UserType> = new Schema(
     },
     verifyCode: {
       type: String,
-      required: [true, "verifyCode required"],
+      required: [true, "VerifyCode required"],
     },
     verifyCodeExpire: {
       type: Date,
-      required: [true, "verifyCodeExp required"],
+      required: [true, "VerifyCodeExpire required"],
     },
     role: {
       type: Number,
-      default: role.user,
-    }
+      enum: [1, 2, 3],
+      default: 2,
+    },
   },
   { timestamps: true }
 );
-const UserModel:Model<UserType> = mongoose.models?.User || mongoose.model<UserType>('User', UserSchema);
-export default UserModel
 
+const UserModel =
+  (mongoose.models?.User as mongoose.Model<UserType>) ||
+  mongoose.model<UserType>('User', UserSchema);
+
+export default UserModel;

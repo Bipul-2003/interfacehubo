@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Layout>
 
-        <div className="mx-14">{children}</div>
+        <div className="mx-2 md:mx-6">{children}</div>
         <Toaster />
         </Layout>
       </body>

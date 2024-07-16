@@ -1,4 +1,4 @@
-import dbConnect from "@/lib/dbConnect";
+import dbConnect from "@/lib/dbConnection";
 import mongoose from "mongoose";
 import SessionModel from "@/models/Sessions";
 

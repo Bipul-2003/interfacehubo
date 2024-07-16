@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import dbConnect from "@/lib/dbConnect";
+import dbConnect from "@/lib/dbConnection";
 import UserModel from "@/models/Users";
 
 export async function PATCH(req: Request) {

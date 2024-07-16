@@ -29,7 +29,7 @@ import { LoadingSpinner } from "./ui/loader";
   
   return (
     <div className="">
-      <Card>
+      <Card >
         <CardHeader>
           <CardTitle className="text-xl">{`${new Date(
             session.startDate
@@ -50,7 +50,7 @@ import { LoadingSpinner } from "./ui/loader";
             <DollarSign className="size-4" />
             {session.price}
           </p>
-          <div className="flex gap-x-2 justify-center">
+          <div className="flex gap-x-2 justify-start">
             <Button
               onClick={() => createEnrollment(String(session._id))}
               disabled={status}>

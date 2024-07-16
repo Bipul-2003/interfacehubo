@@ -3,9 +3,11 @@
 import { UserNav } from "./user-nav";
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { Button } from "./ui/button";
@@ -63,7 +65,7 @@ export function Navbar() {
                 <span className="sr-only">Acme Inc</span>
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="text-muted-foreground hover:text-foreground">
                 Home
               </Link>
@@ -79,14 +81,14 @@ export function Navbar() {
                       <AccordionTrigger className="text-muted-foreground text-lg hover:text-foreground">
                         Dashbord
                       </AccordionTrigger>
-                      <AccordionContent className="grid gap-y-2 text-lg font-medium">
-                        <Link href="/admin/dashboard/home">Home</Link>
-                        <Link href="/admin/dashboard/enrollments">
+                      <AccordionContent className="grid gap-y-2 text-lg font-medium pl-4">
+                        <Link href="/admin/dashboard/home" className="text-muted-foreground hover:text-foreground">Home</Link>
+                        <Link href="/admin/dashboard/enrollments" className="text-muted-foreground hover:text-foreground">
                           Enrollments
                         </Link>
-                        <Link href="/admin/dashboard/sessions">Session</Link>
-                        <Link href="/admin/dashboard/courses">Courses</Link>
-                        <Link href="/admin/dashboard/students">Students</Link>
+                        <Link href="/admin/dashboard/sessions" className="text-muted-foreground hover:text-foreground">Session</Link>
+                        <Link href="/admin/dashboard/courses" className="text-muted-foreground hover:text-foreground">Courses</Link>
+                        <Link href="/admin/dashboard/students" className="text-muted-foreground hover:text-foreground">Students</Link>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
@@ -114,10 +116,35 @@ export function Navbar() {
               </div>
               <div className="">
                 <NavigationMenuItem>
+                <NavigationMenuTrigger>Offerings</NavigationMenuTrigger>
+                <NavigationMenuContent>
+
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}>
+                    <Link href="/courses">Training & Workshops</Link>
+                  </NavigationMenuLink>
                   <NavigationMenuLink
                     asChild
                     className={navigationMenuTriggerStyle()}>
-                    <Link href="/courses">Courses</Link>
+                    <Link href="/">Products</Link>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}>
+                    <Link href="/">Services</Link>
+                  </NavigationMenuLink>
+                </ul>
+                      </NavigationMenuContent>
+                </NavigationMenuItem>
+              </div>
+              <div className="">
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}>
+                    <Link href="/careers">Careers</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </div>
@@ -126,7 +153,7 @@ export function Navbar() {
                   <NavigationMenuLink
                     asChild
                     className={navigationMenuTriggerStyle()}>
-                    <Link href="/">About</Link>
+                    <Link href="/contact-us">Contact Us</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </div>

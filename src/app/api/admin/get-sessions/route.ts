@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import dbConnect from "@/lib/dbConnect";
+import dbConnect from "@/lib/dbConnection";
 import SessionModel from "@/models/Sessions";
 
 export async function GET(req: Request) {
